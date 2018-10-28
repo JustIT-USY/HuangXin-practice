@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+  <display-name>Student_Manager2.1</display-name>
+  <filter>
+    <filter-name>EncodingFilter</filter-name>
+    <filter-class>com.justIt.web.filter.EncodingFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>EncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  <!-- ///////////////////////////////////////////// -->
+  <servlet>
+    <servlet-name>Register</servlet-name>
+    <servlet-class>com.justIt.web.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Register</servlet-name>
+    <url-pattern>/register</url-pattern>
+  </servlet-mapping>
+    <!-- ///////////////////////////////////////////// -->
+  <servlet>
+    <servlet-name>UpdateUser</servlet-name>
+    <servlet-class>com.justIt.web.servlet.UpdateUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateUser</servlet-name>
+    <url-pattern>/updateUser</url-pattern>
+  </servlet-mapping>
+    <!-- ///////////////////////////////////////////// -->
+    
+  <servlet>
+    <servlet-name>UpdateUserSub</servlet-name>
+    <servlet-class>com.justIt.web.servlet.UpdateUserSubServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UpdateUserSub</servlet-name>
+    <url-pattern>/updateUserSub</url-pattern>
+  </servlet-mapping>
+  
+    <!-- ///////////////////////////////////////////// -->
+  <servlet>
+    <servlet-name>DelUser</servlet-name>
+    <servlet-class>com.justIt.web.servlet.DelUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DelUser</servlet-name>
+    <url-pattern>/delUser</url-pattern>
+  </servlet-mapping>
+    <!-- ///////////////////////////////////////////// -->
+  <servlet>
+    <servlet-name>SeaUser</servlet-name>
+    <servlet-class>com.justIt.web.servlet.SearchUserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SeaUser</servlet-name>
+    <url-pattern>/seaUser</url-pattern>
+  </servlet-mapping>
+    <!-- ///////////////////////////////////////////// -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+</web-app>
